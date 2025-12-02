@@ -1,6 +1,7 @@
 package de.seuhd.campuscoffee.tests.system;
 
 import de.seuhd.campuscoffee.api.mapper.PosDtoMapper;
+import de.seuhd.campuscoffee.api.mapper.UserDtoMapper;
 import de.seuhd.campuscoffee.domain.ports.PosService;
 import de.seuhd.campuscoffee.domain.ports.UserService;
 import io.restassured.RestAssured;
@@ -47,9 +48,9 @@ public abstract class AbstractSysTest {
     @Autowired
     protected PosDtoMapper posDtoMapper;
 
-    //TODO: Uncomment after user DTO mapper is implemented
-    //@Autowired
-    //protected UserDtoMapper userDtoMapper;
+    //DONE: Uncomment after user DTO mapper is implemented
+    @Autowired
+    protected UserDtoMapper userDtoMapper;
 
     @LocalServerPort
     private Integer port;
@@ -57,8 +58,8 @@ public abstract class AbstractSysTest {
     @BeforeEach
     void beforeEach() {
         posService.clear();
-        //TODO: Uncomment after user service is implemented
-        //userService.clear();
+        //DONE: Uncomment after user service is implemented
+        userService.clear();
         RestAssured.baseURI = "http://localhost:" + port;
     }
 

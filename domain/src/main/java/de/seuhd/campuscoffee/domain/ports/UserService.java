@@ -18,7 +18,7 @@ public interface UserService {
 
     @NonNull User upsert(@NonNull User user);
 
-    Void delete(@NonNull Long id);
+    void delete(@NonNull Long id);
 
 
 }
