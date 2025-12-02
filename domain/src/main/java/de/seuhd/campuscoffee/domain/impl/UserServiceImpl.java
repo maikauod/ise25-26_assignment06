@@ -52,10 +52,9 @@ public class UserServiceImpl implements UserService {
         }else{
             //update
             log.info("updating user: {}", user.id());
-            Objects.requireNonNull(user.id());
             //ensure user exists in db
             userDataService.getById(user.id());
-        }
+            }
         return performUpsert(user);
 
     }

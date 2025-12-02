@@ -17,9 +17,9 @@ import java.time.LocalDateTime;
  *
  * @param id            user ID = 0 for new user before creation
  * @param createdAt     creation timestamp, automatically set upon creation
- * @param updatedAt     update timestamp, automatically set upon creation & update
+ * @param updatedAt     update timestamp, automatically set upon creation and update
  * @param username      login name, must only contain valid characters (@Pattern)
- * @param email         email address, has to be a valid address (@Email)
+ * @param emailAddress         email address, has to be a valid address (@Email)
  * @param firstName     first name, 255 >= length >= 1
  * @param lastName      last name, 255 >= length >= 1
  */
