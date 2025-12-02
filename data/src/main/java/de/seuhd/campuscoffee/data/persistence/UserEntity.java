@@ -36,7 +36,7 @@ public class UserEntity {
     private LocalDateTime updatedAt;
 
     @Column(name = LOGIN_NAME_COLUMN, unique = true)
-    private String loginName;
+    private String username;
 
     @Column(name = EMAIL_ADDRESS_COLUMN, unique = true)
     private String emailAddress;

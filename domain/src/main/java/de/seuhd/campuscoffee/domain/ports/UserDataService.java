@@ -37,11 +37,11 @@ public interface UserDataService {
 //    /**
 //     * Retrieves a single user entity by its unique login name and returns it as a domain object.
 //     *
-//     * @param loginName the login name of the user to retrieve; must not be null
+//     * @param username the login name of the user to retrieve; must not be null
 //     * @return the user with the specified login name; never null
 //     * @throws NotFoundException if no user exists with the given login name
 //     */
-//    @NonNull User getByLoginName(@NonNull String loginName);
+//    @NonNull User getByUsername(@NonNull String username);
 //
 //    /**
 //     * Creates a new user or updates an existing one.

@@ -11,7 +11,7 @@ import java.util.Optional;
  * Repository for persisting user entities.
  */
 public interface UserRepository extends JpaRepository<UserEntity, Long>, ResettableSequenceRepository {
-    Optional<UserEntity> findByLoginName(String loginName);
+    Optional<UserEntity> findByUsername(String username);
 
     /**
      * Resets the user ID sequence to start from 1.

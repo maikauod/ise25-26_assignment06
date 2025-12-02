@@ -20,7 +20,7 @@ public record UserDto (
         @NotNull
         @Size(min = 1, max = 255, message = "Login name must be between 1 and 255 characters long.")
         @Pattern(regexp = "\\w+", message = "Login name can only contain word characters: [a-zA-Z_0-9]+") // implies non-empty
-        @NonNull String loginName,
+        @NonNull String username,
 
         @NotNull
         @Email

@@ -43,10 +43,10 @@ class UserDataServiceImpl implements UserDataService {
 //
 //    @Override
 //    @NonNull
-//    public User getByLoginName(@NonNull String loginName) {
-//        return userRepository.findByLoginName(loginName)
+//    public User getByUsername(@NonNull String username) {
+//        return userRepository.findByUsername(username)
 //                .map(userEntityMapper::fromEntity)
-//                .orElseThrow(() -> new NotFoundException(User.class, UserEntity.LOGIN_NAME_COLUMN, loginName));
+//                .orElseThrow(() -> new NotFoundException(User.class, UserEntity.LOGIN_NAME_COLUMN, username));
 //    }
 //
 //    @Override
@@ -73,7 +73,7 @@ class UserDataServiceImpl implements UserDataService {
 //            // translate database constraint violations to domain exceptions
 //            // this is the adapter's responsibility in hexagonal architecture
 //            if (ConstraintViolationChecker.isConstraintViolation(e, UserEntity.LOGIN_NAME_CONSTRAINT)) {
-//                throw new DuplicationException(User.class, UserEntity.LOGIN_NAME_COLUMN, user.loginName());
+//                throw new DuplicationException(User.class, UserEntity.LOGIN_NAME_COLUMN, user.username());
 //            } else if (ConstraintViolationChecker.isConstraintViolation(e, UserEntity.EMAIL_ADDRESS_CONSTRAINT)) {
 //                throw new DuplicationException(User.class, UserEntity.EMAIL_ADDRESS_COLUMN, user.emailAddress());
 //            }
